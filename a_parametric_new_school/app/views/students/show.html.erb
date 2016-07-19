@@ -1,15 +1,8 @@
-<% school.name %>
+<%= school.name %>
+<%= teacher.name %>
 
-  <div class="teacher-student-block">
+  <% teacher.students.each do |student| %>
 
-    <% teachers.each do |teacher| %>
+  <h3 class="student-name"> <%= link_to student.name, student %></h3>
 
-    <h2 class="teacher-name"> <%= link_to teacher.name, teacher %>
-
-      <% teacher.students.each do |student| %>
-
-      <h3 class="student-name"> <%= link_to student.name, student %>
-
-      <% end %>
     <% end %>
-  </div>

@@ -1,1 +1,6 @@
-<%= "Hello STUDENTS" %>
+
+<% students.each do |student| %>
+
+<h3 class="student-name"> <%= link_to student.name, student %>
+
+<% end %>

@@ -7,9 +7,11 @@ class TeachersController < ApplicationController
   end
 
   def show
+    teacher = Teacher.find(params[:id])
+    student = Student.where(id: params[:id])
     render template: 'teachers/show.html.erb', locals: {
-      teacher: Teacher.find(params[:id]),
-      student: Student.where(id: params[:id])
+      teacher: teacher,
+      student: Student.where(teacher_id: params[:teacher_id])
     }
   end
 

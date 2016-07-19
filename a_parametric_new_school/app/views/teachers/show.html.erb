@@ -1,15 +1,11 @@
-<% school.name %>
+<h1><%= teacher.school.name %></h1>
+<h1><%= teacher.name %></h1>
 
   <div class="teacher-student-block">
 
-    <% teachers.each do |teacher| %>
+    <% teacher.students.each do |student| %>
 
-    <h2 class="teacher-name"> <%= link_to teacher.name, teacher %>
+    <h3 class="student-name"> <%= link_to student.name, student %>
 
-      <% teacher.students.each do |student| %>
-
-      <h3 class="student-name"> <%= link_to student.name, student %>
-
-      <% end %>
     <% end %>
   </div>

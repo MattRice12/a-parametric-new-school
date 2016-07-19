@@ -6,6 +6,12 @@ class StudentsController < ApplicationController
   end
 
   def show
+    student = Student.find(params[:id])
+    render template: 'students/show.html.erb', locals: {
+      student: student,
+      teacher: student.teacher,
+      school: student.teacher.school
+    }
   end
 
   def new
