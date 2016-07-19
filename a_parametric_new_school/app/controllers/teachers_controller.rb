@@ -1,11 +1,16 @@
 class TeachersController < ApplicationController
   def index
     render template: 'teachers/index.html.erb', locals: {
-      teachers: Teacher.all
+      teachers: Teacher.all,
+      student: Student.where(id: params[:id])
     }
   end
 
   def show
+    render template: 'teachers/show.html.erb', locals: {
+      teacher: Teacher.find(params[:id]),
+      student: Student.where(id: params[:id])
+    }
   end
 
   def new

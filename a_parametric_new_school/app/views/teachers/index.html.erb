@@ -1,1 +1,13 @@
-<%= "Hello TEACHERS" %>
+  <% teachers.each do |teacher| %>
+    <div class="teacher-student-block">
+
+    <h2 class="teacher-name"> <%= link_to teacher.name, teacher %>
+
+      <% teacher.students.each do |student| %>
+
+      <h3 class="student-name"> <%= link_to student.name, student %>
+
+      <% end %>
+    </div>
+
+    <% end %>

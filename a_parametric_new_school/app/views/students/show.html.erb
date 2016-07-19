@@ -1,10 +1,8 @@
+<% school.name %>
 
-<% schools.each do |school| %>
-<div class="school-block">
-  <h1 class="school-name"> <%= link_to school.name, school_path(school) %> </h1>
   <div class="teacher-student-block">
 
-    <% school.teachers.each do |teacher| %>
+    <% teachers.each do |teacher| %>
 
     <h2 class="teacher-name"> <%= link_to teacher.name, teacher %>
 
@@ -15,7 +13,3 @@
       <% end %>
     <% end %>
   </div>
-
-  </div>
-
-  <% end %>

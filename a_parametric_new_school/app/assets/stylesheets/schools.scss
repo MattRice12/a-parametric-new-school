@@ -1,3 +1,42 @@
 // Place all the styles related to the schools controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.school-block {
+  float: left;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  width: 350px;
+  .school-name {
+    font-size: 150%;
+    font-weight: bold;
+    a {
+      color: red;
+    }
+
+  }
+  .teacher-student-block {
+    border: 1px dotted black;
+    .teacher-name {
+      border-bottom: 1px dotted lightgray;
+      font-size: 125%;
+      a {
+        text-decoration: none;
+        color: green;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .student-name {
+      font-size: 100%;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

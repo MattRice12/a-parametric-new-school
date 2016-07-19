@@ -1,0 +1,133 @@
+@import 'variables';
+
+div {
+  h6 {
+    background-color: white;
+    height: 50px;
+    border: 1px solid $border-color;
+    padding-top: 5px;
+    .title {
+      text-align: center;
+      position: relative;
+      font-weight: bold;
+      border-bottom: 2px solid black;
+      padding: 5px;
+      font-size: 125%;
+      left: 40%;
+      top: 10px;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+        color: $main-color;
+      }
+    }
+    .home {
+      float: left;
+      height: 40px;
+      color: black;
+      position: relative;
+      top: 5px;
+      left: 8.1%;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+        color: $main-color;
+      }
+      img {
+        height: 25px;
+        position: relative;
+        bottom: -2px;
+        padding-left: 10px;
+        width: auto;
+      }
+    }
+    .new-school {
+      float: right;
+      border: 2px solid black;
+      color: black;
+      padding: 13px 27px 5px 27px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 8.5%;
+      &:hover {
+        border: 2px solid black;
+      }
+      a {
+        color: black;
+        position: relative;
+        bottom: 5px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .new-teacher {
+      float: right;
+      border: 2px solid black;
+      color: black;
+      padding: 13px 27px 5px 27px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+      &:hover {
+        border: 2px solid black;
+      }
+      a {
+        color: black;
+        position: relative;
+        bottom: 5px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .new-student {
+      float: right;
+      border: 2px solid black;
+      color: black;
+      padding: 13px 27px 5px 27px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+      &:hover {
+        border: 2px solid black;
+      }
+      a {
+        color: black;
+        position: relative;
+        bottom: 5px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .home {
+    visibility: hidden;
+    img {
+      visibility: visible;
+      left: -40%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .title {
+    visibility: hidden;
+  }
+  .home {
+    visibility: hidden;
+    img {
+      visibility: visible;
+    }
+  }
+
+}
