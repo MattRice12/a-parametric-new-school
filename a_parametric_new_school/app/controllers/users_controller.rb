@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :destroy]
+  skip_before_action :authenticate_user!
 
   def index
     render locals: {
@@ -19,22 +19,22 @@ class UsersController < ApplicationController
     }
   end
 
+  def create
+    user = User.new(user_params)
+    if user.save
+      redirect_to user, notice: 'Successfully created an account and signed in!'
+    else
+      render :new, locals: {
+        user: user
+      }
+    end
+  end
+
   def edit
     user = User.find(params[:id])
     if current_user != user
       flash[:alert] = "You cannot edit other users, only you."
       redirect_to users_path
-    end
-  end
-
-  def create
-    user = User.new(user_params)
-    if user.save
-      redirect_to user, notice: 'User was successfully created.'
-    else
-      render :new, locals: {
-        user: user
-      }
     end
   end
 

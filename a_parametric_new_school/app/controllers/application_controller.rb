@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :authenticate_user!
 
   def current_user
     User.find_by(id: session[:user_id])
@@ -10,9 +11,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    unless user_logged_in?
+    if session[:user_id].nil?
       flash[:alert] = "You must be signed in to do that."
-      redirect_to sessions_sign_in_path
+      redirect_to sign_in_path
     end
   end
 

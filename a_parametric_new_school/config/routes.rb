@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/sign_in'
-  post 'sessions/authenticate'
+  get 'sign_in', to: 'sessions#sign_in', as: 'sign_in'
+  post 'sign_in', to: 'sessions#create'
+  post 'sign_out', to: 'sessions#sign_out', as: 'sign_out'
+  get 'sign_out', to: 'sessions#destroy'
 
   resources :users
   resources :students
