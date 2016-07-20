@@ -1,10 +1,9 @@
 class SessionsController < ApplicationController
+
   def sign_in
-    #Displays sign in form
   end
 
   def authenticate
-    # Does the authentication process
     user = User.find_by(email: params[:email])
     if user.present?
       if user.authenticate(params[:password])

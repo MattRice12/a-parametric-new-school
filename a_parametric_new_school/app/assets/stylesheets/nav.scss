@@ -4,48 +4,30 @@
 .row {
   border: 2px solid black;
   border-radius: 10px;
-  margin: 0 10px;
-  background: #FF7D01;
+  background: $background-color;
   .title {
     background-color: white;
     padding: 0 10px 0 10px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 200%;
+    font-size: 150%;
     text-decoration: none;
     color: black;
-    &:hover{
-      text-decoration: underline;
-      color: $main-color;
-    }
   }
-  .home {
-    height: 40px;
-    color: black;
+  .home img {
+    height: 25px;
     position: relative;
-    top: 5px;
-    left: 8.1%;
-    text-decoration: none;
-    color: black;
-    &:hover{
-      text-decoration: underline;
-      color: $main-color;
-    }
-    img {
-      height: 25px;
-      position: relative;
-      bottom: -2px;
-      padding-left: 10px;
-      width: auto;
-    }
+    bottom: -2px;
+    padding-left: 10px;
+    width: auto;
   }
   .new-school {
     border: 2px solid black;
     color: black;
-    padding: 6px 27px 5px 27px;
+    padding: 5px;
+    font-size: 90%;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 8.5%;
     &:hover {
       border: 2px solid black;
     }
@@ -62,10 +44,10 @@
   .new-teacher {
     border: 2px solid black;
     color: black;
-    padding: 6px 27px 5px 27px;
+    padding: 5px;
+    font-size: 90%;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 10px;
     &:hover {
       border: 2px solid black;
     }
@@ -82,10 +64,10 @@
   .new-student {
     border: 2px solid black;
     color: black;
-    padding: 6px 27px 5px 27px;
+    padding: 5px;
+    font-size: 90%;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 10px;
     &:hover {
       border: 2px solid black;
     }
@@ -98,5 +80,13 @@
         text-decoration: underline;
       }
     }
+  }
+  .new-user {
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 90%;
+    font-weight: bold;
+    text-decoration: none;
   }
 }

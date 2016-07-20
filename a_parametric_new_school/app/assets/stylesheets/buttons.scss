@@ -1,10 +1,17 @@
+@import 'variables';
+
 
 .button-primary {
-  a {
     color: black;
-    text-decoration: none;
+    background: $main-color;
+    border-radius: 5px;
     &:hover {
+      background: $secondary-color;
       text-decoration: underline;
-    }
   }
+}
+
+div.two.columns {
+  margin: 0;
+  width: 100px;
 }

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/sign_in'
+  post 'sessions/authenticate'
+
   resources :users
   resources :students
   resources :teachers
