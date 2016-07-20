@@ -21,10 +21,8 @@
 
       <% school.teachers.each do |teacher| %>
 
-      <h2 class="index-teacher-name"> <%= link_to teacher.name, teacher %>
-
+        <h2 class="index-teacher-name"> <%= link_to teacher.name, teacher %>
         <% teacher.students.order(:name).each do |student| %>
-
         <h3 class="index-student-name"> <%= link_to student.name, student %>
 
         <% end %>

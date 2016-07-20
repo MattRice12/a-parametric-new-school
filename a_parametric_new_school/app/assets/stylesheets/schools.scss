@@ -54,16 +54,29 @@
   }
 }
 
-.show-teacher-student-block {
-  border: 1px dotted black;
-  width: 1000px;
-  .school-show-teacher-block {
+.show-school-total {
+  border: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 10px;
+  width: 98%;
+  .show-school-name-block {
+    text-align: center;
+    display: block;
+    .show-school-name {
+      font-size: 150%;
+      font-weight: bold;
+      color: red;
+    }
+    .show-buttons {
+    }
+  }
+  .show-teacher-student-block {
     float: left;
-    width: 200px;
-    margin: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    .teacher-name {
+    width: 33.12%;
+    text-align: center;
+    border: 1px solid black;
+    .show-teacher-name {
       border-bottom: 1px dotted lightgray;
       font-size: 125%;
       a {
@@ -74,13 +87,13 @@
         }
       }
     }
-  }
-  .student-name {
-    font-size: 100%;
-    a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
+    .show-student-name {
+      font-size: 100%;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -88,13 +101,12 @@
 
 .button-primary.delete-school {
   border: 2px solid black;
-  padding: 5px;
+  padding: 7px;
   height: 30px;
   margin: 0 5px 0 5px;
-  float: right;
   a {
     position: relative;
-    bottom: 10px;
+    bottom: 12px;
   }
 }
 .button-primary.edit-school {
@@ -102,7 +114,6 @@
   height: 30px;
   margin: 0 5px 0 5px;
   border: 2px solid black;
-  float: right;
   a {
     position: relative;
     bottom: 12px;

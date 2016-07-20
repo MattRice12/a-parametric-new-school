@@ -1,25 +1,23 @@
-<div class="index-school-total">
-  <div class="index-school-block">
+<div class="show-school-total">
+  <div class="show-school-block">
+    <div class="show-school-name-block">
+      <h1 class="show-school-name"><%= school.name %></h1>
 
-    <div class="school-edit-delete"> <%= school.name %>
-       <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path) %></button>
+      <div class="show-buttons">
+         <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path) %></button>
 
-       <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
+         <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
+      </div>
     </div>
+
   </div>
-</div>
 
-
-####more CSS here. Make similar to index
-<div class="show-teacher-student-block">
-  <div class="twelve column show-teacher-student-block">
-    <% teachers.each do |teacher| %>
-      <div class="show-teacher-block">
+  <% teachers.each do |teacher| %>
+    <div class="show-teacher-student-block">
         <h2 class="show-teacher-name"> <%= link_to teacher.name, teacher %>
-        <% teacher.students.each do |student| %>
+        <% teacher.students.order(:name).each do |student| %>
         <h3 class="show-student-name"> <%= link_to student.name, student %>
         <% end %>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

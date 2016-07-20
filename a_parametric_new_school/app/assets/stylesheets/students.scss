@@ -1,3 +1,71 @@
 // Place all the styles related to the students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.show-teacher-total {
+  border: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  .show-school-name-block {
+    text-align: center;
+    display: block;
+    .show-school-name {
+      font-size: 175%;
+      font-weight: bold;
+      color: red;
+    }
+    .show-teacher-name {
+      border-bottom: 1px dotted lightgray;
+      font-size: 150%;
+      color: green;
+    }
+    .show-student-name {
+      font-size: 125%;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.button-set {
+  text-align: center;
+  display: inline-block;
+  padding-left: 95px;
+  .button-primary.delete-student {
+    border: 2px solid black;
+    padding: 7px 10px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+    a {
+      position: relative;
+      bottom: 12px;
+    }
+  }
+  .button-primary.edit-student {
+    border: 2px solid black;
+    padding: 7px 20px;
+    height: 30px;
+    margin: 0 5px 0 5px;
+    a {
+      position: relative;
+      bottom: 12px;
+    }
+  }
+}
+.button-primary.back-button {
+  float: right;
+  padding: 10px 25px;
+  height: 30px;
+  margin: 0 5px 0 5px;
+  border: 2px solid black;
+  a {
+    position: relative;
+    bottom: 15px;
+  }
+}

@@ -1,9 +1,14 @@
+<div class="show-teacher-total">
+  <div class="show-school-name-block">
+    <h1 class="show-school-name"><%= school.name %></h1>
+    <h2 class="show-teacher-name"><%= teacher.name %></h2>
+    <h3 class="student-name"> <%= student.name %></h3>
 
-<div><%= link_to school.name, school_path(school) %>
-<%= teacher.name %>
+    <div class="button-set">
+      <button type="edit" class="button-primary edit-student"><%= link_to("Edit", edit_student_path) %></button>
 
-  <h3 class="student-name"> <%= student.name %></h3>
-
-  <button type="edit" class="button-primary edit-student"><%= link_to("Edit", edit_student_path) %></button>
-
-  <button type="delete" class="cutton-primary delete-student"><%= link_to "Delete", student_path, method: :delete, data: {confirm: "Are you sure?"} %></button>
+      <button type="delete" class="button-primary delete-student"><%= link_to "Delete", student_path, method: :delete, data: {confirm: "Are you sure?"} %></button>
+    </div>
+    <button type="back" class="button-primary back-button"><%= link_to "Back", teacher_path(teacher)%></button>
+  </div>
+</div>
