@@ -1,6 +1,6 @@
 class Teacher < ApplicationRecord
+  has_many :students, dependent: :destroy
   belongs_to :school
-  has_many :students
 
   validates :name, presence: true
 end
