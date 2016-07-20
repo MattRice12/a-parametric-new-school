@@ -1,24 +1,44 @@
-# README
+##LINKS THAT WORK
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I didn't set up heroku
 
-Things you may want to cover:
+#School index:
+http://localhost:3000/
 
-* Ruby version
+#School show
+http://localhost:3000/schools/1
 
-* System dependencies
+#Teacher show:
+http://localhost:3000/teachers/1
 
-* Configuration
+#Student show:
+http://localhost:3000/students/6
 
-* Database creation
+#Student edit:
+http://localhost:3000/students/6/edit
 
-* Database initialization
+#Student new:
+http://localhost:3000/students/new
 
-* How to run the test suite
+#School edit:
+http://localhost:3000/schools/1/edit
 
-* Services (job queues, cache servers, search engines, etc.)
+#School new
+http://localhost:3000/schools/new
 
-* Deployment instructions
+#Teacher edit
+http://localhost:3000/schools/1/edit
 
-* ...
+#Teacher new
+http://localhost:3000/teachers/new
+
+#Also you can delete school from:
+http://localhost:3000/
+
+#You can delete teachers from:
+http://localhost:3000/schools/1
+
+#You can delete students from:
+http://localhost:3000/teachers/1
+#AND
+http://localhost:3000/students/6
