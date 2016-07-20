@@ -2,22 +2,22 @@
   <div class="show-school-block">
     <div class="show-school-name-block">
       <h1 class="show-school-name"><%= school.name %></h1>
-
-      <div class="show-buttons">
-         <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path) %></button>
-
-         <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
-      </div>
     </div>
-
   </div>
 
-  <% teachers.each do |teacher| %>
-    <div class="show-teacher-student-block">
-        <h2 class="show-teacher-name"> <%= link_to teacher.name, teacher %>
-        <% teacher.students.order(:name).each do |student| %>
-        <h3 class="show-student-name"> <%= link_to student.name, student %>
-        <% end %>
+  <div class="show-teacher-block-total">
+    <% teachers.each do |teacher| %>
+    <div class="show-buttons2">
+       <button type="edit" class="button-primary edit-teacher"><%= link_to("Edit", edit_school_path(school)) %></button>
+
+       <button type="delete" class="button-primary delete-teacher"><%= link_to "Delete", teacher_path(teacher), method: :delete, data: {confirm: "Are you sure?"} %></button>
     </div>
-  <% end %>
+      <div class="show-teacher-student-block">
+          <h2 class="show-teacher-name"> <%= link_to teacher.name, teacher %>
+          <% teacher.students.order(:name).each do |student| %>
+          <h3 class="show-student-name"> <%= link_to student.name, student %>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

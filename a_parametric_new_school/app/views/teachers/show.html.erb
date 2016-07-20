@@ -1,9 +1,25 @@
 <div class="show-teacher-total">
-  <div class="show-school-name-block">
-    <h1 class="show-school-name"><%= teacher.school.name %></h1>
+  <div class="show-teacher-name-block">
+
+
+    <h1 class="show-teacher-name"><%= teacher.school.name %></h1>
     <h2 class="show-teacher-name"><%= teacher.name %></h2>
-    <% teacher.students.order(:name).each do |student| %>
-    <h3 class="show-student-name"><%= link_to student.name, student %>
+
+    <div class="show-student-name-block">
+      <% teacher.students.order(:name).each do |student| %>
+        <h3 class="show-student-name"><%= link_to student.name, student %>
+
+    <div class="button-set">
+      <button type="delete" class="button-primary delete-teacher"><%= link_to "Delete", student_path, method: :delete, data: {confirm: "Are you sure?"} %></button>
+
+      <button type="edit" class="button-primary edit-teacher"><%= link_to("Edit", edit_student_path) %></button>
+
+    </div>
       <% end %>
+    </div>
+
   </div>
+
+  <button type="back" class="button-primary show-teacher-back-button"><%= link_to "Back", school_path%></button>
+
 </div>

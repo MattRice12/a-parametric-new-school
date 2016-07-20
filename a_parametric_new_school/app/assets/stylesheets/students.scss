@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .show-teacher-total {
+  margin: 10px;
   border: 2px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -64,6 +65,9 @@
   height: 30px;
   margin: 0 5px 0 5px;
   border: 2px solid black;
+  &:hover {
+    border: 2px solid black;
+  }
   a {
     position: relative;
     bottom: 15px;

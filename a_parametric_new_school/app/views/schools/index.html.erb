@@ -8,26 +8,25 @@
 
       <div class="index-buttons">
 
-        <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
-
         <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path(school)) %></button>
 
+        <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
 
       </div>
 
     </div>
 
-    <div class="index-teacher-student-block">
-
+    <div class="index-teacher-block-total">
       <% school.teachers.each do |teacher| %>
-
+      <div class="index-teacher-student-block">
         <h2 class="index-teacher-name"> <%= link_to teacher.name, teacher %>
         <% teacher.students.order(:name).each do |student| %>
         <h3 class="index-student-name"> <%= link_to student.name, student %>
 
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <% end %>

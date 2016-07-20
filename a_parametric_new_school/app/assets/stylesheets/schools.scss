@@ -30,24 +30,29 @@
       float: right;
     }
   }
-  .index-teacher-student-block {
-    .index-teacher-name {
-      border-bottom: 1px dotted lightgray;
-      font-size: 125%;
-      a {
-        text-decoration: none;
-        color: green;
-        &:hover {
-          text-decoration: underline;
+  .index-teacher-block-total {
+    display: flex;
+    .index-teacher-student-block {
+      .index-teacher-name {
+        min-height: 50px;
+        border-bottom: 1px dotted lightgray;
+        font-size: 125%;
+        a {
+          text-decoration: none;
+          color: green;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
-    }
-    .index-student-name {
-      font-size: 100%;
-      a {
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
+      .index-student-name {
+        padding: 0 10px;
+        font-size: 100%;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -56,8 +61,7 @@
 
 .show-school-total {
   border: 2px solid black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   margin: 10px;
   width: 98%;
   .show-school-name-block {
@@ -68,22 +72,23 @@
       font-weight: bold;
       color: red;
     }
-    .show-buttons {
-    }
   }
-  .show-teacher-student-block {
-    float: left;
-    width: 33.12%;
-    text-align: center;
-    border: 1px solid black;
-    .show-teacher-name {
-      border-bottom: 1px dotted lightgray;
-      font-size: 125%;
-      a {
-        text-decoration: none;
-        color: green;
-        &:hover {
-          text-decoration: underline;
+  .show-teacher-block-total {
+    display: flex;
+    .show-teacher-student-block {
+      float: left;
+      width: 33.12%;
+      display: inline-table;
+      text-align: center;
+      .show-teacher-name {
+        border-bottom: 1px solid lightgray;
+        font-size: 125%;
+        a {
+          text-decoration: none;
+          color: green;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -99,23 +104,66 @@
   }
 }
 
-.button-primary.delete-school {
+.show-buttons2 {
+  display: flex;
+  position: relative;
+  width: 0px;
+  left: 202px;
+  top: -8px;
+}
+
+.button-primary.delete-teacher {
   border: 2px solid black;
-  padding: 7px;
+  padding: 5px;
   height: 30px;
-  margin: 0 5px 0 5px;
   a {
     position: relative;
-    bottom: 12px;
+    bottom: 7px;
+  }
+}
+.button-primary.edit-teacher {
+  padding: 5px;
+  height: 30px;
+  margin: 0 5px 0 5px;
+  border: 2px solid black;
+  a {
+    position: relative;
+    bottom: 7px;
+  }
+}
+
+
+.button-primary.delete-school {
+  border: 2px solid black;
+  padding: 5px;
+  height: 30px;
+  a {
+    position: relative;
+    bottom: 7px;
   }
 }
 .button-primary.edit-school {
-  padding: 7px;
+  padding: 5px;
   height: 30px;
   margin: 0 5px 0 5px;
   border: 2px solid black;
   a {
     position: relative;
-    bottom: 12px;
+    bottom: 7px;
   }
+}
+
+@media (max-width: 550px) {
+  .index-school-total {
+    margin-left: -22px;
+    width: 40%;
+    min-width: 387px;
+  }
+}
+
+@media (max-width: 967px) {
+  .show-buttons2 {
+    visibility: hidden;
+  }
+
 }
