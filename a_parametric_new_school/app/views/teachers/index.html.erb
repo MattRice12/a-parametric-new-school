@@ -1,9 +1,9 @@
   <% teachers.each do |teacher| %>
 
     <div class="school-edit-delete"> <%= school.name %>
-       <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path(school)) %></button>
+       <%= link_to("Edit", edit_school_path(school), class: "button-primary") %>
 
-       <button type="delete" class="cutton-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
+       <%= link_to "Delete", school_path(school, class: "cutton-primary delete-school"), method: :delete, data: {confirm: "Are you sure?"} %>
      </div>
 
     <div class="teacher-student-block">

@@ -10,9 +10,9 @@
         <h3 class="show-student-name"><%= link_to student.name, student %>
 
     <div class="button-set">
-      <button type="delete" class="button-primary delete-teacher"><%= link_to "Delete", student_path, method: :delete, data: {confirm: "Are you sure?"} %></button>
+      <%= link_to ("Delete", student_path, class: "button-primary") method: :delete, data: {confirm: "Are you sure?"} %>
 
-      <button type="edit" class="button-primary edit-teacher"><%= link_to("Edit", edit_student_path) %></button>
+      <%= link_to("Edit", edit_student_path, class: "button-primary") %>
 
     </div>
       <% end %>
@@ -20,6 +20,6 @@
 
   </div>
 
-  <button type="back" class="button-primary show-teacher-back-button"><%= link_to "Back", school_path%></button>
+  <%= link_to ("Back", school_path, class: "button-primary") %>
 
 </div>

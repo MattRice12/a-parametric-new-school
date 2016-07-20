@@ -1,7 +1,7 @@
 @import 'variables';
 
 
-.row {
+.nav-row{
   border: 2px solid black;
   border-radius: 10px;
   background: $background-color;
@@ -21,67 +21,7 @@
     padding-left: 10px;
     width: auto;
   }
-  .new-school {
-    border: 2px solid black;
-    color: black;
-    padding: 5px;
-    font-size: 90%;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      border: 2px solid black;
-    }
-    a {
-      color: black;
-      position: relative;
-      bottom: 5px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  .new-teacher {
-    border: 2px solid black;
-    color: black;
-    padding: 5px;
-    font-size: 90%;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      border: 2px solid black;
-    }
-    a {
-      color: black;
-      position: relative;
-      bottom: 5px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  .new-student {
-    border: 2px solid black;
-    color: black;
-    padding: 5px;
-    font-size: 90%;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-      border: 2px solid black;
-    }
-    a {
-      color: black;
-      position: relative;
-      bottom: 5px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  .new-user {
+  .button-primary {
     border: 2px solid black;
     color: black;
     padding: 5px;

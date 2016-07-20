@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     render locals: {
-      user: User.all
+      users: User.all
     }
   end
 
@@ -52,13 +52,11 @@ class UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     user.destroy
-    respond_to do |format|
-      redirect_to users_url, notice: 'User was successfully destroyed.'
-    end
+    redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
