@@ -8,9 +8,9 @@
   <div class="show-teacher-block-total">
     <% teachers.each do |teacher| %>
     <div class="show-buttons2">
-       <button type="edit" class="button-primary edit-teacher"><%= link_to("Edit", edit_school_path(school)) %></button>
+       <%= link_to("Edit", edit_school_path(school), class: "button-primary") %>
 
-       <button type="delete" class="button-primary delete-teacher"><%= link_to "Delete", teacher_path(teacher), method: :delete, data: {confirm: "Are you sure?"} %></button>
+       <%= link_to "Delete", teacher_path(teacher), class: "button-primary", method: :delete, data: {confirm: "Are you sure?"} %>
     </div>
       <div class="show-teacher-student-block">
           <h2 class="show-teacher-name"> <%= link_to teacher.name, teacher %>

@@ -8,9 +8,9 @@
 
       <div class="index-buttons">
 
-        <button type="edit" class="button-primary edit-school"><%= link_to("Edit", edit_school_path(school)) %></button>
+        <%= link_to("Edit", edit_school_path(school), class: "button-primary") %>
 
-        <button type="delete" class="button-primary delete-school"><%= link_to "Delete", school_path(school), method: :delete, data: {confirm: "Are you sure?"} %></button>
+        <%= link_to "Delete", school_path(school), class: "button-primary", method: :delete, data: {confirm: "Are you sure?"} %>
 
       </div>
 

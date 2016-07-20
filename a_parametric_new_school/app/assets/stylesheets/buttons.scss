@@ -4,13 +4,14 @@ a.button-primary {
     color: black;
     background: $main-color;
     border-radius: 5px;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
     &:hover {
       background: $secondary-color;
       text-decoration: underline;
   }
-}
-
-div.two.columns {
-  margin: 0;
-  width: 100px;
 }

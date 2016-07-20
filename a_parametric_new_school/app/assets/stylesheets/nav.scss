@@ -5,6 +5,10 @@
   border: 2px solid black;
   border-radius: 10px;
   background: $background-color;
+  .column {
+    margin: 0;
+    width: 110px;
+  }
   .title {
     background-color: white;
     padding: 0 10px 0 10px;
@@ -15,18 +19,10 @@
     color: black;
   }
   .home img {
-    height: 25px;
+    height: 35px;
     position: relative;
     bottom: -2px;
-    padding-left: 10px;
+    margin: 20px;
     width: auto;
-  }
-  .button-primary {
-    border: 2px solid black;
-    color: black;
-    padding: 5px;
-    font-size: 90%;
-    font-weight: bold;
-    text-decoration: none;
   }
 }

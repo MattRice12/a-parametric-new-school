@@ -1,19 +1,23 @@
 <div class="row nav-row">
 
-  <div class="one column">
+  <div class="three column">
     <%= link_to(root_path, class: "home") do %>
       <%= image_tag("https://cdn4.iconfinder.com/data/icons/roundies-2/32/birdhouse-512.png") %>
     <% end %>
   </div>
 
-  <div class="one columns">
+  <div class="four columns">
     <%= link_to("Parametric School", root_path, class: "title") %>
   </div>
 
-  <div class="two columns"> <%= link_to("New School", new_school_path, class: "button-primary new-school") %></div>
-  <div class="two columns"> <%= link_to("New Teacher", new_teacher_path, class: "button-primary new-teacher") %></div>
-  <div class="two columns"> <%= link_to("New Student", new_student_path, class: "button-primary new-student") %></div>
-  <div class="two columns"><%= link_to 'New User', new_user_path, class: "button-primary new-user" %></div>
-  <div class="two columns"><%= link_to 'User Index', users_path, class: "button-primary user-index" %></div>
+  <div class="one column"> <%= link_to("New School", new_school_path, class: "button-primary") %></div>
+
+  <div class="one column"> <%= link_to("New Teacher", new_teacher_path, class: "button-primary") %></div>
+
+  <div class="one column"> <%= link_to("New Student", new_student_path, class: "button-primary") %></div>
+
+  <div class="one column"><%= link_to 'New User', new_user_path, class: "button-primary" %></div>
+
+  <div class="one column"><%= link_to 'User Index', users_path, class: "button-primary" %></div>
 
 </div>
