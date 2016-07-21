@@ -56,6 +56,9 @@ class SchoolsController < ApplicationController
 
   def destroy
     school = School.find(params[:id])
+    user = User.find_by(email: params[:email])
+
+    if
     school.destroy
     redirect_to root_path
   end
