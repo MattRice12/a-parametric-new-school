@@ -43,12 +43,14 @@ class SchoolsController < ApplicationController
 
   def update
     school = School.find(params[:id])
-    school.name = params[:school][:name] if params[:school][:name].present?
-    if school.save
-      redirect_to school_path
+    user = User.find_by(id: session[:user_id])
+    if user.school_id == school.id
+      school.name = params[:school][:name]
+      school.save
+      redirect_to schools_path
     else
-      flash[:alert] = "Could not be edited due to errors."
-      render template: 'school/edit.html.erb', locals: {
+      flash[:alert] = "You cannot edit this school. You are not a member of it."
+      render template: 'schools/edit.html.erb', locals: {
         school: school
       }
     end
@@ -56,14 +58,14 @@ class SchoolsController < ApplicationController
 
   def destroy
     school = School.find(params[:id])
-    if session[:user_id].school_id == user.school_id
-      school.destroy
+    user = User.find_by(id: session[:user_id])
+    if school.id != user.school_id
+      flash[:alert] = "You cannot delete this school. You are not a member of it."
+      redirect_to root_path
     else
-      flash[:alert] = "Could not be edited due to errors."
-      render locals: {
-        school: school
-      }
+      school.destroy
+      flash[:alert] = "You deleted the school along with yourself. You must sign up again to perform further actions."
+      redirect_to new_user_path
     end
-    redirect_to root_path
   end
 end

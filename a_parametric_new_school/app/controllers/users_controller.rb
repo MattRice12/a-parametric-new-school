@@ -24,10 +24,9 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       redirect_to user, notice: 'Successfully created an account and signed in!'
+      session[:user_id] = user.id
     else
-      render :new, locals: {
-        user: user
-      }
+      render :new
     end
   end
 
