@@ -56,10 +56,14 @@ class SchoolsController < ApplicationController
 
   def destroy
     school = School.find(params[:id])
-    user = User.find_by(email: params[:email])
-
-    if
-    school.destroy
+    if session[:user_id].school_id == user.school_id
+      school.destroy
+    else
+      flash[:alert] = "Could not be edited due to errors."
+      render locals: {
+        school: school
+      }
+    end
     redirect_to root_path
   end
 end

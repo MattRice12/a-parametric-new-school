@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def index
     render locals: {
-      users: User.all
+      users: User.all,
+      schools: School.all
     }
   end
 
@@ -15,7 +16,7 @@ class UsersController < ApplicationController
 
   def new
     render locals: {
-      user: User.new
+      user: User.new,
     }
   end
 
@@ -57,6 +58,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:school_id, :name, :email, :password, :password_confirmation)
     end
 end
