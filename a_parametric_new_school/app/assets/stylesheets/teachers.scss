@@ -43,42 +43,7 @@
 
 .button-set {
   float: right;
-  .button-primary.delete-teacher {
-    float: right;
-    border: 2px solid black;
-    padding: 7px;
-    height: 30px;
-    margin: 0 5px 0 5px;
-    a {
-      position: relative;
-      bottom: 12px;
-    }
-  }
-  .button-primary.edit-teacher {
-    float: right;
-    padding: 7px;
-    height: 30px;
-    margin: 0 5px 0 5px;
-    border: 2px solid black;
-    a {
-      position: relative;
-      bottom: 12px;
-    }
-  }
-}
-.button-primary.show-teacher-back-button {
-  float: right;
-  padding: 10px 41px;
-  height: 30px;
-  margin: 0 5px 10px 5px;
-  border: 2px solid black;
-  &:hover {
-    border: 2px solid black;
-  }
-  a {
-    position: relative;
-    bottom: 15px;
-  }
+
 }
 
 @media (max-width: 650px) {

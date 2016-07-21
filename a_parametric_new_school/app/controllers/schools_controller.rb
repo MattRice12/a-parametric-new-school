@@ -27,7 +27,7 @@ class SchoolsController < ApplicationController
     school = School.new
     school.name = params[:school][:name]
     if school.save
-      redirect_to root_path
+      redirect_to root_path, notice: 'School was successfully created.'
     else
       flash[:alert] = "Could not be created due to errors."
       render template: 'school/new.html.erb', locals: {
@@ -50,7 +50,7 @@ class SchoolsController < ApplicationController
     if user.school_id == school.id
       school.name = params[:school][:name]
       school.save
-      redirect_to schools_path
+      redirect_to schools_path, notice: 'School was successfully updated.'
     else
       flash[:alert] = "You cannot edit this school. You are not a member of it."
       render template: 'schools/edit.html.erb', locals: {
@@ -68,7 +68,7 @@ class SchoolsController < ApplicationController
     else
       school.destroy
       flash[:alert] = "You deleted the school along with yourself. You must sign up again to perform further actions."
-      redirect_to new_user_path
+      redirect_to new_user_path, notice: 'School was successfully destroyed.'
     end
   end
 end

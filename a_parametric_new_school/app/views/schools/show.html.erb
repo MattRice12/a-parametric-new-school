@@ -10,7 +10,7 @@
     <div class="show-buttons2">
        <%= link_to("Edit", edit_school_path(school), class: "button-primary") %>
 
-       <%= link_to "Delete", teacher_path(teacher), class: "button-primary", method: :delete, data: {confirm: "Are you sure?"} %>
+       <%= link_to "Delete", teacher_path(teacher), class: "button-primary", method: :delete, data: {confirm: "Deleting the School will delete all Teachers, Students, and Users too. Are you sure you want to continue? "} %>
     </div>
       <div class="show-teacher-student-block">
           <h2 class="show-teacher-name"> <%= link_to teacher.name, teacher %>

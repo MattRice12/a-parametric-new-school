@@ -5,6 +5,12 @@
     <%= f.text_area :name, placeholder: 'Mike Blandersonman' %>
   </fieldset>
 
+  <div class="field">
+    <%= f.label :teacher_id %>
+    <%= f.select :teacher_id,
+    options_from_collection_for_select(Teacher.all, :id, :name) %>
+  </div>
+
   <div class='actions text-center'>
     <%= f.submit class: 'button-primary' %>
   </div>

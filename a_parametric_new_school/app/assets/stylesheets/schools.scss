@@ -112,46 +112,6 @@
   top: -8px;
 }
 
-.button-primary.delete-teacher {
-  border: 2px solid black;
-  padding: 5px;
-  height: 30px;
-  a {
-    position: relative;
-    bottom: 7px;
-  }
-}
-.button-primary.edit-teacher {
-  padding: 5px;
-  height: 30px;
-  margin: 0 5px 0 5px;
-  border: 2px solid black;
-  a {
-    position: relative;
-    bottom: 7px;
-  }
-}
-
-
-.button-primary.delete-school {
-  border: 2px solid black;
-  padding: 5px;
-  height: 30px;
-  a {
-    position: relative;
-    bottom: 7px;
-  }
-}
-.button-primary.edit-school {
-  padding: 5px;
-  height: 30px;
-  margin: 0 5px 0 5px;
-  border: 2px solid black;
-  a {
-    position: relative;
-    bottom: 7px;
-  }
-}
 
 @media (max-width: 550px) {
   .index-school-total {

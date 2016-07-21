@@ -25,12 +25,13 @@ class StudentsController < ApplicationController
   def create
     student = Student.new
     student.name = params[:student][:name]
+    student.teacher_id = params[:student][:teacher_id]
     if student.save
-      redirect_to student_path
+      redirect_to student_path(student), notice: 'Student was successfully created.'
     else
       flash[:alert] = "Could not be created due to errors."
-      render template: 'student/new.html.erb', locals: {
-        sudent: student
+      render template: 'students/new.html.erb', locals: {
+        student: student
       }
     end
   end
@@ -45,10 +46,10 @@ class StudentsController < ApplicationController
     student = Student.find(params[:id])
     student.name = params[:student][:name] if params[:student][:name].present?
     if student.save
-      redirect_to student_path
+      redirect_to student_path, notice: 'Student was successfully updated.'
     else
       flash[:alert] = "Could not be edited due to errors."
-      render template: 'student/edit.html.erb', locals: {
+      render template: 'students/edit.html.erb', locals: {
         student: student
       }
     end
@@ -57,6 +58,6 @@ class StudentsController < ApplicationController
   def destroy
     student = Student.find(params[:id])
     student.destroy
-    redirect_to student_path
+    redirect_to schools_path, notice: 'Student was successfully destroyed.'
   end
 end
