@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     render template: 'teachers/index.html.erb', locals: {
       teachers: Teacher.all,

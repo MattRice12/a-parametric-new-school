@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     render template: 'students/index.html.erb', locals: {
       students: Student.all.order(:name)
